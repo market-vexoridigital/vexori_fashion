@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vexori - Archive 01</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Montserrat:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <!-- Fixed Left Vertical Nav (Green) -->
+    <div class="fixed-sidebar">
+        <div class="sidebar-icon active nav-trigger" data-target="ss-sequence">ARCHIVE</div>
+        <div class="sidebar-icon" id="info-trigger" style="writing-mode: vertical-rl; text-orientation: mixed; transform: rotate(180deg); font-size: 0.7rem; font-weight: 700; letter-spacing: 2px;">INFO</div>
+        <div class="sidebar-icon nav-trigger" data-target="editorial-section">◎</div>
+        <div class="sidebar-icon nav-trigger" data-target="mm-sequence">⏚</div>
+        <div class="sidebar-icon nav-trigger" data-target="shop-section">◱</div>
+    </div>
+
+    <!-- Header -->
+    <header class="global-header" id="navbar">
+        <div class="logo" id="brand-logo"></div>
+        <nav class="nav-links">
+            <a href="#" class="active text-green nav-trigger" data-target="ss-sequence">ARCHIVE</a>
+            <a href="#" class="text-white nav-trigger" data-target="editorial-section">EDITORIAL</a>
+            <a href="#" class="text-white nav-trigger" data-target="mm-sequence">COLLECTIONS</a>
+            <a href="#" class="text-white nav-trigger" data-target="shop-section">SHOP</a>
+        </nav>
+        <div class="nav-icons">
+            <span class="icon text-white" id="cart-icon">👜</span>
+        </div>
+    </header>
+
+    <!-- MAIN SCROLL CONTAINER -->
+    <div class="main-container">
+
+        <!-- SECTION 1: SS SEQUENCE (HERO) -->
+        <!-- Right Green, Left White -->
+        <section class="scroll-sequence split-50-right-green" id="ss-sequence">
+            <div class="sticky-wrapper">
+                
+                <!-- Watermark -->
+                <div class="hero-backdrop">
+                    <!-- Left part of watermark (Green text on white) -->
+                    <h1 class="watermark-text left-watermark" id="watermark-left"></h1>
+                    <!-- Right part of watermark (White text on green) -->
+                    <h1 class="watermark-text right-watermark" id="watermark-right"></h1>
+                </div>
+
+                <div class="canvas-container canvas-left-half">
+                    <canvas id="sequence-canvas-1"></canvas>
+                </div>
+                
+                <!-- Hero Content Overlays -->
+                <div class="content-overlay hero-overlay">
+                    <div class="floating-right text-white">
+                        <span class="gold-text" id="hero-title"></span><br>
+                        <span id="hero-subtitle"></span>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- SECTION 2: THE EDITORIAL -->
+        <!-- Left Green, Right White -->
+        <section class="editorial-section split-50-left-green" id="editorial-section">
+            <div class="editorial-container animate-target" data-animate="up">
+                <div class="editorial-left">
+                    <h2 class="gold-serif" id="editorial-title"></h2>
+                    <p class="text-white body-text" id="editorial-body"></p>
+                    <button class="btn-gold" id="editorial-btn"></button>
+                </div>
+                
+                <div class="editorial-right">
+                    <div class="image-wrapper logo-wrapper">
+                        <img src="" alt="Brand Logo" id="editorial-img-logo">
+                        <div class="material-study-box">
+                            <h5 class="gold-text-small" id="material-title"></h5>
+                            <p class="text-green" id="material-text"></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- TRANSITION BREAK: Scrolling Marquee -->
+        <div class="marquee-break">
+            <div class="marquee-content" id="marquee-content">
+                <!-- Spans injected via JS -->
+            </div>
+        </div>
+
+        <!-- SECTION 3: MM SEQUENCE -->
+        <!-- Center White, Sides Green -->
+        <section class="scroll-sequence split-25-center-white" id="mm-sequence">
+            <div class="sticky-wrapper">
+                
+                <div class="canvas-container canvas-center-half">
+                    <canvas id="sequence-canvas-2"></canvas>
+                </div>
+                
+                <!-- MM Content Overlays -->
+                <div class="content-overlay centered-layout">
+                    <div class="desc-block animate-target" data-animate="bottom">
+                        <p class="subtitle gold-text" id="mm-subtitle"></p>
+                        <h2 class="section-title text-green playfair-serif" id="mm-title"></h2>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 4: THE COLLECTION -->
+        <!-- Full White -->
+        <section class="collection-section full-white" id="shop-section">
+            <div class="collection-header animate-target" data-animate="up">
+                <h2 class="gold-serif" id="collection-title"></h2>
+                <p class="text-green" id="collection-subtitle"></p>
+            </div>
+            
+            <div class="collection-grid" id="collection-grid">
+                <!-- Products dynamically injected via JS -->
+            </div>
+        </section>
+
+        <!-- SECTION 5: EDITORIAL FOOTER -->
+        <footer class="site-footer full-green">
+            <div class="footer-left-logo" id="footer-logo"></div>
+            <div class="footer-center-copy text-white" id="footer-copyright"></div>
+            <div class="footer-right-links">
+                <a href="#" class="text-white">PRIVACY</a>
+                <a href="#" class="text-white">TERMS</a>
+                <a href="#" class="text-white">CAREERS</a>
+                <a href="#" class="text-white">CONTACT</a>
+            </div>
+        </footer>
+
+    </div>
+
+    <!-- Shopping Cart Drawer -->
+    <div class="cart-overlay" id="cart-overlay"></div>
+    <div class="cart-drawer" id="cart-drawer">
+        <div class="cart-header">
+            <h3 class="gold-serif">YOUR BAG</h3>
+            <button class="close-cart" id="close-cart">✕</button>
+        </div>
+        <div class="cart-items" id="cart-items-container">
+            <!-- Items will be injected here via JS -->
+            <div class="empty-cart-msg text-white">Your bag is currently empty.</div>
+        </div>
+        <div class="cart-footer">
+            <div class="cart-total">
+                <span class="text-white">SUBTOTAL</span>
+                <span class="gold-text price" id="cart-subtotal">$0</span>
+            </div>
+            <button class="btn-gold checkout-btn">PROCEED TO CHECKOUT</button>
+        </div>
+    </div>
+
+    <!-- Information Drawer (Left) -->
+    <div class="info-drawer" id="info-drawer">
+        <div class="info-header">
+            <h3 class="gold-serif" id="info-drawer-title"></h3>
+            <button class="close-info" id="close-info">✕</button>
+        </div>
+        <div class="info-content">
+            <p class="text-white info-lead" id="info-drawer-lead"></p>
+            <div id="info-drawer-blocks-container">
+                <!-- Info blocks injected via JS -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Global Information Modal -->
+    <div class="global-modal" id="global-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 class="gold-serif" id="modal-title">TITLE</h3>
+                <button class="close-modal" id="close-modal">✕</button>
+            </div>
+            <div class="modal-body" id="modal-body">
+                <!-- Content injected via JS -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="config.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
