@@ -7,13 +7,11 @@
     word-wrap: break-word;
 }
 
-body, html {
+body {
     background-color: #ffffff;
     color: #ffffff;
     font-family: 'Montserrat', sans-serif;
     overflow-x: hidden;
-    max-width: 100%;
-    width: 100%;
 }
 
 /* Constants */
