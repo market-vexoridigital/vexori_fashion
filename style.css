@@ -3,6 +3,8 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
 }
 
 body, html {
@@ -929,7 +931,7 @@ canvas {
     .global-header {
         left: 0;
         width: 100%;
-        padding: 1.5rem 1.5rem;
+        padding: 1rem 1.5rem;
     }
     .nav-links {
         display: none; /* Hide top links on mobile */
@@ -952,37 +954,41 @@ canvas {
     }
     
     /* 4. Watermark & Hero Typography */
-    .watermark-text { font-size: 25vw; top: 40%; }
+    .watermark-text { font-size: 20vw; top: 40%; }
     .left-watermark { left: 50%; top: 30%; color: var(--dark-green); }
     .right-watermark { left: 50%; top: 50%; color: rgba(255,255,255,0.05); }
     
     .floating-left { display: none; }
-    .floating-right { right: 1.5rem; top: auto; bottom: 8rem; text-align: right; }
+    .floating-right { right: 1.5rem; top: auto; bottom: 8rem; text-align: right; width: 80%; }
     
     /* 5. Editorial Section */
-    .editorial-section { padding: 4rem 1.5rem; }
+    .editorial-section { padding: 4rem 1rem; }
     .editorial-container {
         grid-template-columns: 1fr;
         gap: 3rem;
+        width: 100%;
+        overflow: hidden;
     }
-    .editorial-left h2 { font-size: 2.8rem; }
-    .material-study-box { margin: 2rem auto 0 auto; padding: 1.5rem; max-width: 100%; }
+    .editorial-left h2 { font-size: 2.2rem; }
+    .material-study-box { margin: 2rem auto 0 auto; padding: 1.5rem; max-width: 100%; width: 100%; box-sizing: border-box; }
     
     /* 6. Marquee & MM Section */
     .marquee-content span { font-size: 0.8rem; }
-    .centered-layout .section-title { font-size: 2.8rem; }
+    .centered-layout .section-title { font-size: 2.2rem; }
     
     /* 7. Collection Grid */
-    .collection-section { padding: 4rem 1.5rem; }
-    .collection-header h2 { font-size: 2.2rem; }
-    .collection-grid { grid-template-columns: 1fr; gap: 2rem; }
+    .collection-section { padding: 4rem 1rem; }
+    .collection-header h2 { font-size: 2rem; }
+    .collection-grid { grid-template-columns: 1fr; gap: 2rem; width: 100%; }
     
     /* 8. Footer */
     .site-footer {
         flex-direction: column;
         gap: 1.5rem;
-        padding: 3rem 1.5rem 5rem 1.5rem;
+        padding: 3rem 1rem 5rem 1rem;
         text-align: center;
+        width: 100%;
+        overflow: hidden;
     }
     .footer-right-links { flex-wrap: wrap; justify-content: center; gap: 1.5rem; }
     
